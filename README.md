@@ -7,23 +7,23 @@ The following repository encapsulates my current desktop configurations, it incl
 ![Main desktop](./assets/main.png "Main desktop")
 
 - Tiling Window manager 
-[Window manager](./assets/awesome.png "Awesome config")
+![Window manager](./assets/awesome.png "Awesome config")
 
 - Notifications with Dunst
-[Notifications](./assets/awesome-notif.png "Notifications")
+![Notifications](./assets/awesome-notif.png "Notifications")
 
 ### Shell 
 - Shell prompt with starship 
-[Starship prompt](./assets/starship.png "Starship prompt")
+![Starship prompt](./assets/starship.png "Starship prompt")
 
 - ZSH config 
-[ZSH configuration with fzf](./assets/zsh-fzf.png "zsh config with fzf")
+![ZSH configuration with fzf](./assets/zsh-fzf.png "zsh config with fzf")
 
 - VIM (NvChad)
-[VIM as an IDE](./assets/nvim.png "VIM IDE")
+![VIM as an IDE](./assets/nvim.png "VIM IDE")
 
 - Tmux 
-[Tmux config](./assets/tmux.png "Tmux multiplexer")
+![Tmux config](./assets/tmux.png "Tmux multiplexer")
 
 
 
