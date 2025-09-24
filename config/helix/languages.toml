@@ -1,0 +1,13 @@
+[[language]]
+name = "python"
+language-servers = ["pylsp", "ruff"]
+auto-format = true
+scope = "source.python"
+
+[language.formatter]
+command = "ruff"
+args = ["format", "-"]
+
+[language-server.ruff]
+command = "ruff"
+args = ["server"]

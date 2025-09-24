@@ -1,0 +1,20 @@
+theme = "catppuccin_macchiato"
+[editor]
+line-number = "relative"   # relative line numbers (great for motions)
+cursorline = true          # highlight current line
+true-color = true          # enables 24-bit colors
+scrolloff = 5              # keep context around cursor
+completion-trigger-len = 1 # autocomplete after 1 char
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.lsp]
+display-messages = true    # show LSP diagnostics inline
+
+[keys.normal]
+# Convenience bindings
+C-s = ":w"   # Save with Ctrl-s
+C-q = ":q"   # Quit with Ctrl-q
