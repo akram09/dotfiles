@@ -1,13 +1,68 @@
+[language-server.pyright]
+command = "pyright-langserver"
+args = ["--stdio"]
+config = {}
+
+[language-server.vale]
+command = "vale-ls"
+args = []
+config = {}
+
+[language-server.nixd]
+command = "nixd"
+args = []
+config = {}
+
 [[language]]
 name = "python"
-language-servers = ["pylsp", "ruff"]
+roots = ["pyproject.toml"]
+formatter = { command = "ruff", args = ["format", "--quiet", "-"] }
 auto-format = true
-scope = "source.python"
+rulers = [89]
+language-servers = [
+  { name = "pyright", except-features = [] },
+  # { name = "vale", except-features = [] },
+]
 
-[language.formatter]
-command = "ruff"
-args = ["format", "-"]
+[[language]]
+name = "toml"
+scope = "source.toml"
+formatter = { command = "dprint", args = ["fmt", "--stdin", "toml"] }
 
-[language-server.ruff]
-command = "ruff"
-args = ["server"]
+[[language]]
+name = "markdown"
+scope = "source.md"
+formatter = { command = "dprint", args = ["fmt", "--stdin", "md"] }
+language-servers = [
+  { name = "vale", except-features = [] },
+]
+
+[[language]]
+name = "json"
+scope = "source.json"
+auto-format = false
+formatter = { command = "dprint", args = ["fmt", "--stdin", "json"] }
+
+[[language]]
+name = "yaml"
+scope = "source.yaml"
+auto-format = false
+formatter = { command = "dprint", args = ["fmt", "--stdin", "yaml"] }
+language-servers = ["craft-ls"]
+
+[language-server.craft-ls]
+command = "craft-ls"
+
+[[language]]
+name = "nix"
+scope = "source.nix"
+formatter = { command = "alejandra", args = ["--quiet", "-"] }
+auto-format = true
+language-servers = [
+  { name = "nixd", except-features = [] },
+]
+
+[[language]]
+name = "hcl"
+scope = "source.tf"
+formatter = { command = "terraform", args = ["fmt", "-"] }
