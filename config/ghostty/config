@@ -1,0 +1,4 @@
+theme = Catppuccin Frappe
+shell-integration = fish
+command = /usr/bin/fish --login --interactive
+
